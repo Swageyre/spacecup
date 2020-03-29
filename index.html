@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Herr+Von+Muellerhoff' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Istok+Web|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>March Madness Stock Matchup</title>
+</head>
+
+<body>
+    <header class="hero">
+        <div class="hero-wrap">
+            <p class="intro" id="intro"></p>
+            <h1 id="headline"></h1>
+            <p class="year"><i class="fa fa-star"></i><span id="year"></span><i class="fa fa-star"></i></p>
+            <p id="subtitle"></p>
+        </div>
+    </header>
+
+
+    <section id="bracket">
+        <div class="container">
+            <div class="split split-one">
+                <div class="round round-one current">
+                    <div class="round-details"><span id="round1">Round 1</span><br /><span class="date"><span id="date1"></span></span>
+                    </div>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team1">Team 1</span>
+                            <span class="score" id="score1"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team2">Team 2</span>
+                            <span class="score" id="score2"></span>
+                        </li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team3">Team 3</span>
+                            <span class="score" id="score3"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team4">Team 4</span>
+                            <span class="score" id="score4"></span>
+                        </li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team5">Team 5</span>
+                            <span class="score" id="score5"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team6">Team 6</span>
+                            <span class="score" id="score6"></span>
+                        </li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team7">Team 7</span>
+                            <span class="score" id="score7"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team8">Team 8</span>
+                            <span class="score" id="score8"></span>
+                        </li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team9">Team 9</span>
+                            <span class="score" id="score9"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team10">Team 10</span>
+                            <span class="score" id="score10"></span>
+                        </li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team11">Team 11</span>
+                            <span class="score" id="score11"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team12">Team 12</span>
+                            <span class="score" id="score12"></span>
+                        </li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team13">Team 13</span>
+                            <span class="score" id="score13"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team14">Team 14</span>
+                            <span class="score" id="score14"></span>
+                        </li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team15">Team 15</span>
+                            <span class="score" id="score15"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team16">Team 16</span>
+                            <span class="score" id="score16"></span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END ROUND ONE -->
+
+                <div class=" round round-two ">
+                    <div class="round-details"><span id="round2">Round 2</span><br /><span class="date"><span id="date2"></span></span>
+                    </div>
+                    <ul class="matchup ">
+                        <li class="team team-top ">&nbsp;<span class="score ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="score ">&nbsp;</span></li>
+                    </ul>
+                    <ul class="matchup ">
+                        <li class="team team-top ">&nbsp;<span class="score ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="score ">&nbsp;</span></li>
+                    </ul>
+                    <ul class="matchup ">
+                        <li class="team team-top ">&nbsp;<span class="score ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="score ">&nbsp;</span></li>
+                    </ul>
+                    <ul class="matchup ">
+                        <li class="team team-top ">&nbsp;<span class="score ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="score ">&nbsp;</span></li>
+                    </ul>
+                </div>
+                <!-- END ROUND TWO -->
+
+                <div class="round round-three ">
+                    <div class="round-details"><span id="round3">Round 3</span><br /><span class="date"><span id="date3"></span></span>
+                    </div>
+                    <ul class="matchup ">
+                        <li class="team team-top ">&nbsp;<span class="score ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="score ">&nbsp;</span></li>
+                    </ul>
+                    <ul class="matchup ">
+                        <li class="team team-top ">&nbsp;<span class="score ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="score ">&nbsp;</span></li>
+                    </ul>
+                </div>
+                <!-- END ROUND THREE -->
+            </div>
+
+            <div class="champion ">
+                <div class="semis-l ">
+                    <div class="round-details"><span id="semiTop">Semifinals</span><br /><span class="date"><span id="semiTopDate"></span></span>
+                    </div>
+                    <ul class="matchup championship ">
+                        <li class="team team-top ">&nbsp;<span class="vote-count ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="vote-count ">&nbsp;</span></li>
+                    </ul>
+                </div>
+                <div class="final ">
+                    <i class="fa fa-trophy "></i>
+                    <div class="round-details"><span id="championship">Championship</span><br /><span class="date"><span id="championshipDate"></span></span>
+                    </div>
+                    <ul class="matchup championship ">
+                        <li class="team team-top ">&nbsp;<span class="vote-count ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="vote-count ">&nbsp;</span></li>
+                    </ul>
+                </div>
+                <div class="semis-r ">
+                    <div class="round-details"><span id="semiBot">Semifinals</span><br /><span class="date"><span id="semiBotDate"></span></span>
+                    </div>
+                    <ul class="matchup championship ">
+                        <li class="team team-top ">&nbsp;<span class="vote-count ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="vote-count ">&nbsp;</span></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="split split-two ">
+
+
+                <div class="round round-three ">
+                    <div class="round-details"><span id="round3_right">Round 3</span><br /><span class="date"><span id="date3_right"></span></span>
+                    </div>
+                    <ul class="matchup ">
+                        <li class="team team-top ">&nbsp;<span class="score ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="score ">&nbsp;</span></li>
+                    </ul>
+                    <ul class="matchup ">
+                        <li class="team team-top ">&nbsp;<span class="score ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="score ">&nbsp;</span></li>
+                    </ul>
+                </div>
+                <!-- END ROUND THREE -->
+
+                <div class="round round-two ">
+                    <div class="round-details"><span id="round2_right">Round 2</span><br /><span class="date"><span id="date2_right"></span></span>
+                    </div>
+                    <ul class="matchup ">
+                        <li class="team team-top ">&nbsp;<span class="score ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="score ">&nbsp;</span></li>
+                    </ul>
+                    <ul class="matchup ">
+                        <li class="team team-top ">&nbsp;<span class="score ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="score ">&nbsp;</span></li>
+                    </ul>
+                    <ul class="matchup ">
+                        <li class="team team-top ">&nbsp;<span class="score ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="score ">&nbsp;</span></li>
+                    </ul>
+                    <ul class="matchup ">
+                        <li class="team team-top ">&nbsp;<span class="score ">&nbsp;</span></li>
+                        <li class="team team-bottom ">&nbsp;<span class="score ">&nbsp;</span></li>
+                    </ul>
+                </div>
+                <!-- END ROUND TWO -->
+                <div class="round round-one current ">
+                    <div class="round-details"><span id="round1_right">Round 1</span><br /><span class="date"><span id="date1_right"></span></span>
+                    </div>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team17">Team 17</span>
+                            <span class="score" id="score17"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team18">Team 18</span>
+                            <span class="score" id="score18"></span>
+                        </li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team19">Team 19</span>
+                            <span class="score" id="score19"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team20">Team 20</span>
+                            <span class="score" id="score20"></span>
+                        </li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team21">Team 21</span>
+                            <span class="score" id="score21"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team22">Team 22</span>
+                            <span class="score" id="score22"></span>
+                        </li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team23">Team 23</span>
+                            <span class="score" id="score23"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team24">Team 24</span>
+                            <span class="score" id="score24"></span>
+                        </li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team25">Team 25</span>
+                            <span class="score" id="score25"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team26">Team 26</span>
+                            <span class="score" id="score26"></span>
+                        </li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team27">Team 27</span>
+                            <span class="score" id="score27"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team28">Team 28</span>
+                            <span class="score" id="score28"></span>
+                        </li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team29">Team 29</span>
+                            <span class="score" id="score29"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team30">Team 30</span>
+                            <span class="score" id="score30"></span>
+                        </li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top">
+                            <span id="team31">Team 31</span>
+                            <span class="score" id="score31"></span>
+                        </li>
+                        <li class="team team-top">
+                            <span id="team32">Team 32</span>
+                            <span class="score" id="score32"></span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END ROUND ONE -->
+            </div>
+        </div>
+    </section>
+    <section class="share ">
+        <div class="share-wrap ">
+            <a class="share-icon " href="https://twitter.com/_joebeason "><i class="fa fa-twitter "></i></a>
+            <a class="share-icon " href="# "><i class="fa fa-facebook "></i></a>
+            <a class="share-icon " href="# "><i class="fa fa-envelope "></i></a>
+        </div>
+    </section>
+    <script src="main.js "></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+</body>
+
+</html>
