@@ -60,9 +60,7 @@ body {
 }
 
 #bracket {
-    overflow: hidden;
-    background-color: #e1e1e1;
-    background-color: rgba(225, 225, 225, 0.9);
+    background-color: #dedede;
     padding-top: 20px;
     font-size: 12px;
     padding: 40px 0;
@@ -80,6 +78,7 @@ body {
     display: flex;
     -webkit-flex-direction: row;
     flex-direction: row;
+    background-color: inherit;
 }
 
 .split {
@@ -297,6 +296,9 @@ body {
 }
 
 @media screen and (min-width: 981px) and (max-width: 1099px) {
+    #bracket {
+        overflow: hidden;
+    }
     .container {
         margin: 0 1%;
     }
@@ -314,6 +316,13 @@ body {
     }
     .hero p.year {
         margin: 5px 0 10px;
+    }
+    .vCenter {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
 }
 
@@ -383,12 +392,4 @@ body {
         margin: 5px 0 10px;
         font-size: 18px;
     }
-}
-
-.vCenter {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
 }
