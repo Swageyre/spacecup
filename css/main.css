@@ -305,6 +305,11 @@ li.team.lose {
     color: #3F915F;
 }
 
+.championship.finalee .win {
+    margin: 8px;
+    transform: scale(1.4);
+}
+
 @media screen and (min-width: 981px) and (max-width: 1099px) {
     #bracket {
         overflow: hidden;

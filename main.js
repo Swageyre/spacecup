@@ -17,9 +17,15 @@ if (window.location.hash == "#bracket") {
 function winCheck() {
     Array.from(document.getElementsByClassName("score")).forEach((el) => {
         if (el.innerHTML == "WIN") {
+            if (el.parentElement.classList.contains("lose")) {
+                el.parentNode.classList.remove("lose");
+            }
             el.parentNode.classList.add("win");
             el.parentNode.style.opacity = 1;
         } else if (el.innerHTML == "LOSE") {
+            if (el.parentElement.classList.contains("win")) {
+                el.parentNode.classList.remove("win");
+            }
             el.parentNode.classList.add("lose");
             el.parentNode.style.opacity = 1;
         }
