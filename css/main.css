@@ -214,12 +214,16 @@ body {
     opacity: 1;
 }
 
-.current li.team.win {
+li.team:nth-child(0):not(:empty) {
+    background-color: #fff;
+}
+
+li.team.win {
     background-color: #3F915F;
     color: #f3f3f3;
 }
 
-.current li.team.lose {
+li.team.lose {
     background-color: #b04040;
     color: #f3f3f3;
 }

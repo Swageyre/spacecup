@@ -1,3 +1,4 @@
+var teamsAmount = 32;
 var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1_WTRL_jodERcYOb0fK6PsUhfpbUzRR57Y7cD0d9TBwY/edit?usp=sharing';
 
 
@@ -14,13 +15,15 @@ if (window.location.hash == "#bracket") {
 
 
 function winCheck() {
-    for (let i = 1; i <= 32; i++) {
-        if (document.getElementById("score" + i).innerHTML == "WIN") {
-            document.getElementById("score" + i).parentNode.classList.add("win");
-        } else if (document.getElementById("score" + i).innerHTML == "LOSE") {
-            document.getElementById("score" + i).parentNode.classList.add("lose");
+    Array.from(document.getElementsByClassName("score")).forEach((el) => {
+        if (el.innerHTML == "WIN") {
+            el.parentNode.classList.add("win");
+            el.parentNode.style.opacity = 1;
+        } else if (el.innerHTML == "LOSE") {
+            el.parentNode.classList.add("lose");
+            el.parentNode.style.opacity = 1;
         }
-    }
+    });
 }
 
 function init() {
@@ -31,7 +34,6 @@ function init() {
     })
     winCheck();
 }
-
 
 function showInfo(data, tabletop) {
     tabletop.sheets()['info'].elements.forEach(function(data) {
@@ -61,75 +63,52 @@ function showInfo(data, tabletop) {
         championshipDate.innerHTML = data.championshipDate;
     });
 
-    tabletop.sheets()['teams'].elements.forEach(function(data) {
-        team1.innerHTML = data.team1;
-        score1.innerHTML = data.score1;
-        team2.innerHTML = data.team2;
-        score2.innerHTML = data.score2;
-        team3.innerHTML = data.team3;
-        score3.innerHTML = data.score3;
-        team4.innerHTML = data.team4;
-        score4.innerHTML = data.score4;
-        team5.innerHTML = data.team5;
-        score5.innerHTML = data.score5;
-        team6.innerHTML = data.team6;
-        score6.innerHTML = data.score6;
-        team7.innerHTML = data.team7;
-        score7.innerHTML = data.score7;
-        team8.innerHTML = data.team8;
-        score8.innerHTML = data.score8;
-        team9.innerHTML = data.team9;
-        score9.innerHTML = data.score9;
-        team10.innerHTML = data.team10;
-        score10.innerHTML = data.score10;
-        team11.innerHTML = data.team11;
-        score11.innerHTML = data.score11;
-        team12.innerHTML = data.team12;
-        score12.innerHTML = data.score12;
-        team13.innerHTML = data.team13;
-        score13.innerHTML = data.score13;
-        team14.innerHTML = data.team14;
-        score14.innerHTML = data.score14;
-        team15.innerHTML = data.team15;
-        score15.innerHTML = data.score15;
-        team16.innerHTML = data.team16;
-        score16.innerHTML = data.score16;
-        team17.innerHTML = data.team17;
-        score17.innerHTML = data.score17;
-        team18.innerHTML = data.team18;
-        score18.innerHTML = data.score18;
-        team19.innerHTML = data.team19;
-        score19.innerHTML = data.score19;
-        team20.innerHTML = data.team20;
-        score20.innerHTML = data.score20;
-        team21.innerHTML = data.team21;
-        score21.innerHTML = data.score21;
-        team22.innerHTML = data.team22
-        score22.innerHTML = data.score22
-        team23.innerHTML = data.team23;
-        score23.innerHTML = data.score23;
-        team24.innerHTML = data.team24;
-        score24.innerHTML = data.score24;
-        team25.innerHTML = data.team25;
-        score25.innerHTML = data.score25;
-        team26.innerHTML = data.team26;
-        score26.innerHTML = data.score26;
-        team27.innerHTML = data.team27;
-        score27.innerHTML = data.score27;
-        team28.innerHTML = data.team28
-        score28.innerHTML = data.score28
-        team29.innerHTML = data.team29;
-        score29.innerHTML = data.score29;
-        team30.innerHTML = data.team30;
-        score30.innerHTML = data.score30;
-        team31.innerHTML = data.team31;
-        score31.innerHTML = data.score31;
-        team32.innerHTML = data.team32;
-        score32.innerHTML = data.score32;
+    tabletop.sheets()['round1'].elements.forEach(function(data) {
+        for (let i = 1; i <= teamsAmount; i++) {
+            let team = document.getElementById("team" + i);
+            let score = document.getElementById("score" + i);
+
+            team.innerHTML = data["team" + i];
+            team.parentNode.style.opacity = (data["team" + i] !== '') ? 1 : '';
+            score.innerHTML = data["score" + i];
+        }
+    })
+
+    tabletop.sheets()['round2'].elements.forEach(function(data) {
+        for (let i = 1; i <= (teamsAmount / 2); i++) {
+            let r2team = document.getElementById("r2team" + i);
+            let r2score = document.getElementById("r2score" + i);
+
+            r2team.innerHTML = data["team" + i];
+            r2team.parentNode.style.opacity = (data["team" + i] !== '') ? 1 : '';
+            r2score.innerHTML = data["score" + i];
+        }
+    })
+
+    tabletop.sheets()['round3'].elements.forEach(function(data) {
+        for (let i = 1; i <= (teamsAmount / 4); i++) {
+            let r3team = document.getElementById("r3team" + i);
+            let r3score = document.getElementById("r3score" + i);
+
+            r3team.innerHTML = data["team" + i];
+            r3team.parentNode.style.opacity = (data["team" + i] !== '') ? 1 : '';
+            r3score.innerHTML = data["score" + i];
+        }
+    })
+
+    tabletop.sheets()['finals'].elements.forEach(function(data) {
+        for (let i = 1; i <= ((teamsAmount / 8) + 2); i++) {
+            let r4team = document.getElementById("r4team" + i);
+            let r4score = document.getElementById("r4score" + i);
+
+            r4team.innerHTML = data["team" + i];
+            r4team.parentNode.style.opacity = (data["team" + i] !== '') ? 1 : '';
+            r4score.innerHTML = data["score" + i];
+        }
     })
 }
 window.addEventListener('DOMContentLoaded', init);
 
 window.setInterval(function() {
     init();
-}, 5000);
+}, 1000);
