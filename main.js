@@ -1,5 +1,28 @@
 var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1_WTRL_jodERcYOb0fK6PsUhfpbUzRR57Y7cD0d9TBwY/edit?usp=sharing';
 
+
+if (window.location.hash == "#bracket") {
+    document.getElementById("share").style.display = "none";
+    document.getElementById("hero").style.display = "none";
+
+    document.getElementById("bracket").style.height = "100vh";
+    document.getElementById("bracket").style.padding = "0";
+
+    document.getElementById("bracket").firstChild.nextElementSibling.classList.add("vCenter");
+}
+
+
+
+function winCheck() {
+    for (let i = 1; i <= 32; i++) {
+        if (document.getElementById("score" + i).innerHTML == "WIN") {
+            document.getElementById("score" + i).parentNode.classList.add("win");
+        } else if (document.getElementById("score" + i).innerHTML == "LOSE") {
+            document.getElementById("score" + i).parentNode.classList.add("lose");
+        }
+    }
+}
+
 function init() {
     Tabletop.init({
         key: publicSpreadsheetUrl,
@@ -110,14 +133,3 @@ window.addEventListener('DOMContentLoaded', init);
 window.setInterval(function() {
     init();
 }, 5000);
-
-
-function winCheck() {
-    for (let i = 1; i <= 32; i++) {
-        if (document.getElementById("score" + i).innerHTML == "WIN") {
-            document.getElementById("score" + i).parentNode.classList.add("win");
-        } else if (document.getElementById("score" + i).innerHTML == "LOSE") {
-            document.getElementById("score" + i).parentNode.classList.add("lose");
-        }
-    }
-}
