@@ -408,3 +408,129 @@ li.team.lose {
         font-size: 18px;
     }
 }
+
+#teams,
+#leaderboard {
+    margin: auto;
+}
+
+#teams {
+    margin-bottom: 75px;
+}
+
+#teams .title,
+#leaderboard .title {
+    text-align: center;
+    font-size: x-large;
+    width: max-content;
+}
+
+#teams .standen {
+    display: block;
+    min-width: 330px;
+}
+
+#teams #weeknr {
+    color: #0a0a0a;
+    margin-left: 3px;
+    font-weight: bolder;
+    font-size: smaller;
+}
+
+#teams .match {
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 7px;
+    border: 1px solid #CCD0D3;
+    background-color: #FFF;
+    line-height: 32px;
+}
+
+#teams .match .teamName,
+#teams .match .teamScore {
+    padding: 0px 7px;
+}
+
+#teams .match .win,
+#teams .match .lose {
+    display: flex;
+    justify-content: space-between;
+    min-width: 40%;
+    max-width: 40%;
+}
+
+#teams .match .win {
+    color: #11202B;
+}
+
+#teams .match .win .teamScore,
+#teams .match .win .teamName {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#teams .match .lose {
+    color: #66737C;
+}
+
+#leaderboard h2 {
+    margin-bottom: 7px;
+}
+
+#leaderboard .ltoepwrap {
+    background-color: #FFF;
+    border: 1px solid #CCD0D3;
+    padding: 7px;
+    min-width: 330px;
+}
+
+#leaderboard .lteamBar {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#leaderboard #toep {
+    counter-reset: number;
+}
+
+#leaderboard .lteam {
+    width: 100%;
+    position: relative;
+}
+
+#leaderboard .lteam {
+    counter-increment: number;
+}
+
+#leaderboard .lteam:before {
+    content: counter(number)" ";
+}
+
+#leaderboard .lteamBar .lteam:before {
+    content: '';
+}
+
+#leaderboard #toep>div:nth-child(1) {
+    font-size: 18px;
+}
+
+#leaderboard #toep>div:nth-child(2) {
+    font-size: 16px;
+}
+
+#leaderboard #toep>div:nth-child(3) {
+    font-size: 14px;
+}
+
+#leaderboard .lteam .lpoints {
+    text-align: right;
+    position: absolute;
+    right: 40px;
+}
+
+#leaderboard .lteam .lwl {
+    text-align: right;
+    position: absolute;
+    right: 0;
+}
